@@ -87,4 +87,9 @@ class PostsController extends Controller
         $post->update($form_data);
         return redirect()->route('admin.posts.show', $post);
     }
+
+    public function destroy(Post $post){
+        $post->delete();
+        return redirect()->route('admin.posts.index')->with('deleted','Post eliminato correttamente');
+    }
 }
