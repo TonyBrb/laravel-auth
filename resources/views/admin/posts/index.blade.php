@@ -20,7 +20,7 @@
       <td>{{ $post->title }}</td>
       <td>{{ $post->slug }}</td>
       <td><a href="{{ route('admin.posts.show',$post) }}" class="btn btn-info">SHOW</a></td>
-      <td><a href="#" class="btn btn-success">EDIT</a></td>
+      <td><a href="{{ route('admin.posts.edit',$post) }}" class="btn btn-success">EDIT</a></td>
       <td><a href="#" class="btn btn-danger">DELETE</a></td>
     </tr>
     @endforeach
@@ -28,6 +28,7 @@
     
   </tbody>
 </table>
+  {{ $posts->links() }}
     </div>
 </div>
 @endsection
