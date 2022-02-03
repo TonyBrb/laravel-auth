@@ -13,4 +13,12 @@ class PostsController extends Controller
         $posts = Post::all();
         return view('admin.posts.index', compact('posts'));
     }
+
+    public function show($id){
+        $post= Post::find($id);
+        if($post){
+            return view('admin.posts.show',compact('post'));
+        }
+        abort(404);
+    }
 }

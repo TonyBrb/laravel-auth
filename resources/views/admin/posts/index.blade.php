@@ -10,6 +10,7 @@
       <th scope="col">ID</th>
       <th scope="col">Titolo</th>
       <th scope="col">Slug</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,9 @@
       <th scope="row">{{ $post->id }}</th>
       <td>{{ $post->title }}</td>
       <td>{{ $post->slug }}</td>
+      <td><a href="{{ route('admin.posts.show',$post) }}" class="btn btn-info">SHOW</a></td>
+      <td><a href="#" class="btn btn-success">EDIT</a></td>
+      <td><a href="#" class="btn btn-danger">DELETE</a></td>
     </tr>
     @endforeach
     
@@ -26,4 +30,8 @@
 </table>
     </div>
 </div>
+@endsection
+
+@section('title')
+  Elenco post
 @endsection
