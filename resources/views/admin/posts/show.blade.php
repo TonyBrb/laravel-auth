@@ -6,7 +6,7 @@
       <p>{{ $post->content }}</p>
   </div>
   <div class="container">
-    <a href="#" class="btn btn-success">EDIT</a>
+    <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-success">EDIT</a>
     <a href="#" class="btn btn-danger">DELETE</a>
   </div>
 @endsection
